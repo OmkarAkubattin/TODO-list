@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1></h1>
+    <form action="/" method="post">
+        <Span><input type="text" placeholder="Add New Task" name="task" class="addtask"><button type="submit" class="addbutton">New Task</button></Span>
+    </form>
+    <div class="container">
+        <% if(data != null) { %>
+            <% for(item of data) { %>
+                <div class="tasks">
+                    <div class="taskname"> 
+                        <input type="checkbox" id="checktask"> 
+                        <div> <%= item.name %> </div>
+                    </div>
+                    <button class="deletebutton editbutton" name="<%= item.id %>">Edit</button>
+                    <form class="form-inline" action="/<%= item.id %>/delete?_method=DELETE" method="post">
+                        <button type="submit" class="deletebutton">Delete</button>
+                    </form>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

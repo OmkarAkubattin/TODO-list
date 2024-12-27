@@ -1,0 +1,59 @@
+body{
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+h1{
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    padding-top: 1rem;
+}
+.addtask{
+    width: 31.8rem;
+    padding: 1rem 0 1rem 1rem;
+    border: 1px solid gainsboro;
+    /* font-size: large; */
+}
+.addbutton{
+    padding: 1rem;
+    background-color: rgb(60, 161, 255);
+    color: white;
+    border: none;
+}
+.tasks{
+    background-color: white;
+    width: 38.4rem;
+    height: 2.7rem;
+    border: 1px solid gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .2rem;
+}
+.taskname{
+    margin-left: 1rem;
+    font-size: large;
+    flex-grow: 1;
+    display: inline-flex;
+}
+.form-inline{
+    display: inline;
+}
+.deletebutton{
+    background-color: rgb(255, 83, 83);
+    color: white;
+    border: none;
+    padding: 0.87rem;
+}
+.editbutton{
+    background-color: rgb(89, 183, 91);
+    margin-right: .3rem;
+}
+#checktask:checked + div{
+    text-decoration: line-through;
+}
